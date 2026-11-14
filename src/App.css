@@ -65,6 +65,31 @@
   gap: 48px;
 }
 
+.header-controls {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green);
+}
+
+.language-control select {
+  max-width: 90px;
+  padding: 8px 2px;
+  border: 0;
+  color: var(--green);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -97,6 +122,7 @@
 }
 
 .navigation {
+  order: 1;
   flex: 1;
   justify-content: space-between;
   gap: 24px;
@@ -286,7 +312,7 @@
   position: relative;
   max-width: 500px;
   width: 100%;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .hero-preview::before {
@@ -439,7 +465,8 @@
 
 .user-message {
   max-width: 79%;
-  margin: 0 0 23px auto;
+  margin: 0 0 23px;
+  margin-inline-start: auto;
   padding: 13px 15px;
   border-radius: 12px 12px 3px 12px;
   color: #fff;
@@ -527,7 +554,8 @@
 }
 
 .chat-prompts {
-  margin: 19px 0 0 44px;
+  margin: 19px 0 0;
+  margin-inline-start: 44px;
 }
 
 .chat-prompts > span {
@@ -924,7 +952,8 @@
 }
 
 .faq-item p {
-  margin: -4px 30px 21px 0;
+  margin: -4px 0 21px;
+  margin-inline-end: 30px;
   color: #718477;
   font-size: 13px;
   line-height: 1.75;
@@ -1068,11 +1097,63 @@
   }
 
   .nav-links {
-    gap: 18px;
+    gap: 12px;
+  }
+
+  .nav-actions {
+    gap: 12px;
   }
 
   .hero-grid, .assistant-grid, .why-grid, .faq-grid {
     gap: 45px;
+  }
+
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .section-heading h2,
+  [dir="rtl"] .cta-panel h2,
+  [dir="rtl"] .eyebrow,
+  [dir="rtl"] .hero-badge,
+  [dir="rtl"] .hero-bottom,
+  [dir="rtl"] .chat-date,
+  [dir="rtl"] .chat-prompts > span {
+    letter-spacing: normal;
+  }
+
+  [dir="rtl"] .hero h1,
+  [dir="rtl"] .section-heading h2,
+  [dir="rtl"] .cta-panel h2 {
+    line-height: 1.4;
+  }
+
+  [dir="rtl"] .button svg,
+  [dir="rtl"] .text-link svg,
+  [dir="rtl"] .recipe-arrow {
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .step-arrow {
+    right: auto;
+    left: -19px;
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .decoration-two {
+    right: -45px;
+    left: auto;
+  }
+
+  @media (max-width: 800px) {
+    [dir="rtl"] .step-arrow {
+      right: auto;
+      left: 30px;
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (max-width: 520px) {
+    [dir="rtl"] .decoration-two {
+      right: -10px;
+    }
   }
 
   .four-columns {

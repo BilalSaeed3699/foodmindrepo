@@ -1,8 +1,10 @@
 import { ArrowRight } from 'lucide-react'
 import { steps } from '../../data/landingContent'
 import { SectionHeading } from './Shared'
+import { useLanguage } from '../../language'
 
 export default function HowItWorks() {
+  const { t } = useLanguage()
   return (
     <section className="section how-section" id="how-it-works">
       <div className="container">
@@ -11,7 +13,7 @@ export default function HowItWorks() {
           {steps.map(({ icon: Icon, title, description }, index) => (
             <article className="step-card" key={title}>
               <div className="step-top"><span className="step-icon"><Icon size={24} strokeWidth={1.7} aria-hidden="true" /></span><span className="step-number">0{index + 1}</span></div>
-              <h3>{title}</h3><p>{description}</p>
+              <h3>{t(title)}</h3><p>{t(description)}</p>
               {index < steps.length - 1 && <ArrowRight className="step-arrow" size={19} aria-hidden="true" />}
             </article>
           ))}

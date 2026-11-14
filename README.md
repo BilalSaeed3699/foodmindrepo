@@ -1,16 +1,11 @@
-# React + Vite
+# FoodMind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FoodMind is a React and Vite frontend with a public landing page and an illustrative user workspace. Run it locally with `npm install` and `npm run dev`. Use `npm run build` and `npm run lint` to validate changes.
 
-Currently, two official plugins are available:
+## Demo limitations
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Login, registration, and password reset are **frontend-only demonstrations**, not authentication. Any valid email and a placeholder password of at least eight characters can start a demo session. Do not enter real passwords. No account is created, no password is stored, no email is sent, and no password is changed. The workspace is not protected by a real authorization system.
 
-## React Compiler
+The demo profile and chat history are stored in the current browser tab's session storage and are removed when the demo session ends. Assistant replies and meal recommendations are static examples, not live AI or personalized advice. Meal planning and recent-recipe functionality are not yet connected. English, Arabic, and Urdu are available through the language selector.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app uses client-side paths such as `/login`, `/reset-password`, and `/app/assistant`. A production static host must serve `index.html` for those paths.

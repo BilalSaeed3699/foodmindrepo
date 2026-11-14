@@ -56,6 +56,6 @@ export const faqs = [
   { question: 'Can I get recipes based on my available ingredients?', answer: 'Ingredient-based meal discovery is part of the FoodMind vision. You’ll be able to start with what you have and explore ideas around it.' },
   { question: 'Can I set dietary preferences?', answer: 'Personalized dietary preferences are planned to help make recommendations more relevant to your needs. Always check ingredients yourself for allergies and other medical requirements.' },
   { question: 'Can FoodMind plan my weekly meals?', answer: 'A smart meal planner is planned as part of FoodMind. It is not available on this preview page yet.' },
-  { question: 'Is FoodMind free?', answer: 'Pricing has not been announced yet. This page is a preview, and account registration is not available at this stage.' },
+  { question: 'Is FoodMind free?', answer: 'Pricing has not been announced yet. You can explore a frontend-only demo without creating a real account.' },
   { question: 'Does FoodMind provide nutritional information?', answer: 'Nutrition features have not been confirmed yet. FoodMind is not a substitute for advice from a qualified health professional.' },
 ]
